@@ -1,0 +1,1040 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Madu Coffie Hendra Saputra</title>
+  <meta name="description" content="Etalase Madu Coffie Hendra Saputra: coffee roasting, green bean, bubuk kopi, dan madu. Pesan langsung via WhatsApp.">
+  <style>
+    :root {
+      --ink: #201714;
+      --muted: #665b52;
+      --paper: #fffaf2;
+      --cream: #f4eadc;
+      --gold: #d7962f;
+      --amber: #a9631c;
+      --coffee: #35221a;
+      --green: #3f6846;
+      --line: rgba(32, 23, 20, .14);
+      --shadow: 0 20px 60px rgba(42, 27, 18, .18);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+      background: rgba(255, 250, 242, .86);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: .02em;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: conic-gradient(from 210deg, var(--green), var(--gold), var(--coffee), var(--green));
+      box-shadow: 0 10px 24px rgba(53, 34, 26, .22);
+      font-size: 13px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--ink);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: var(--radius);
+      border: 1px solid transparent;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: #fff;
+      box-shadow: 0 14px 30px rgba(63, 104, 70, .22);
+    }
+
+    .btn-primary:hover {
+      background: #34593b;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 250, 242, .9);
+      border-color: var(--line);
+      color: var(--coffee);
+    }
+
+    .hero {
+      min-height: calc(100vh - 72px);
+      display: grid;
+      align-items: end;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background: #1d1512;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(17, 11, 8, .78) 0%, rgba(17, 11, 8, .52) 42%, rgba(17, 11, 8, .15) 100%),
+        linear-gradient(0deg, rgba(17, 11, 8, .65), rgba(17, 11, 8, .04) 48%),
+        url("assets/hero-hs-coffee-honey-real.png") center / cover no-repeat;
+      z-index: -2;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 16vh;
+      background: linear-gradient(0deg, var(--paper), rgba(255, 250, 242, 0));
+      z-index: -1;
+    }
+
+    .hero-inner {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 84px 0 92px;
+      color: #fff;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 18px;
+      color: #f7d89f;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 42px;
+      height: 2px;
+      background: currentColor;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(46px, 8vw, 92px);
+      line-height: .94;
+      letter-spacing: 0;
+    }
+
+    .hero-copy {
+      max-width: 620px;
+      margin: 22px 0 0;
+      color: rgba(255, 255, 255, .86);
+      font-size: clamp(17px, 2vw, 21px);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      width: min(880px, 100%);
+      margin-top: 56px;
+    }
+
+    .stat {
+      border-left: 1px solid rgba(255, 255, 255, .28);
+      padding-left: 16px;
+    }
+
+    .stat strong {
+      display: block;
+      color: #fff;
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .stat span {
+      color: rgba(255, 255, 255, .72);
+      font-size: 13px;
+    }
+
+    section {
+      padding: 86px 0;
+    }
+
+    .wrap {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 1fr minmax(220px, 390px);
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 4.5vw, 58px);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .category-strip {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .chip {
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .product-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 12px 34px rgba(42, 27, 18, .08);
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .product-media {
+      min-height: 210px;
+      position: relative;
+      background:
+        linear-gradient(140deg, rgba(32, 23, 20, .08), rgba(255, 255, 255, .05)),
+        var(--photo, url("assets/hero-madu-coffie.png")) center / cover no-repeat;
+    }
+
+    .product-media::after {
+      content: attr(data-label);
+      position: absolute;
+      left: 12px;
+      bottom: 12px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255, 250, 242, .92);
+      color: var(--coffee);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .product-body {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .product-body h3 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .product-body p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      flex: 1;
+    }
+
+    .price {
+      color: var(--amber);
+      font-weight: 900;
+    }
+
+    .product-card .btn {
+      width: 100%;
+      min-height: 42px;
+      font-size: 14px;
+    }
+
+    .real-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .gallery-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 10px 28px rgba(42, 27, 18, .08);
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+    }
+
+    .gallery-card.wide {
+      grid-column: span 2;
+    }
+
+    .feature-band {
+      background: var(--coffee);
+      color: #fff;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1.15fr repeat(3, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .feature-lead {
+      padding: 34px;
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .06);
+    }
+
+    .feature-lead h2 {
+      margin: 0 0 14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1;
+    }
+
+    .feature-lead p,
+    .feature-card p {
+      color: rgba(255, 255, 255, .74);
+      margin: 0;
+    }
+
+    .feature-card {
+      padding: 28px;
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: var(--radius);
+      background: rgba(255, 250, 242, .05);
+    }
+
+    .feature-card strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .reviews {
+      background:
+        linear-gradient(180deg, rgba(244, 234, 220, .55), rgba(255, 250, 242, .95)),
+        var(--paper);
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .review-card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 12px 34px rgba(42, 27, 18, .08);
+    }
+
+    .stars {
+      color: var(--gold);
+      font-size: 18px;
+      letter-spacing: .08em;
+      margin-bottom: 14px;
+    }
+
+    .review-card blockquote {
+      margin: 0;
+      color: var(--ink);
+      font-size: 16px;
+    }
+
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--coffee);
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+
+    .reviewer strong,
+    .reviewer span {
+      display: block;
+      line-height: 1.25;
+    }
+
+    .reviewer span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .location {
+      background: #fff;
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: .82fr 1.18fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .address-card {
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(150deg, rgba(63, 104, 70, .1), rgba(215, 150, 47, .1)),
+        var(--paper);
+      box-shadow: 0 12px 34px rgba(42, 27, 18, .08);
+    }
+
+    .address-card h3 {
+      margin: 0 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1;
+    }
+
+    .address-card p {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+
+    .address-line {
+      display: grid;
+      gap: 6px;
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 20px;
+      color: var(--coffee);
+      font-weight: 900;
+    }
+
+    .address-line span {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .map-frame {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--cream);
+      box-shadow: 0 12px 34px rgba(42, 27, 18, .08);
+      min-height: 100%;
+    }
+
+    .map-frame iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 500px;
+      border: 0;
+    }
+
+    .order {
+      background:
+        linear-gradient(115deg, rgba(63, 104, 70, .1), rgba(215, 150, 47, .15)),
+        var(--cream);
+    }
+
+    .order-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .72);
+    }
+
+    .step b {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--coffee);
+    }
+
+    .step h3 {
+      margin: 0 0 4px;
+      font-size: 18px;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .contact-panel {
+      padding: 34px;
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+    }
+
+    .contact-panel h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(32px, 4vw, 50px);
+      line-height: 1;
+    }
+
+    .contact-panel p {
+      color: var(--muted);
+      margin: 16px 0 24px;
+    }
+
+    .phone {
+      display: block;
+      margin-top: 14px;
+      color: var(--coffee);
+      font-weight: 900;
+    }
+
+    .catalog-note {
+      border-top: 1px solid var(--line);
+      margin-top: 24px;
+      padding-top: 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 34px 0;
+      color: rgba(255, 255, 255, .72);
+      background: #18100d;
+    }
+
+    .footer-inner {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 980px) {
+      .product-grid,
+      .real-gallery,
+      .review-grid,
+      .hero-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .feature-grid,
+      .order-box,
+      .location-grid,
+      .section-head {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        min-height: 64px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 760px;
+      }
+
+      .hero-inner {
+        padding: 72px 0 74px;
+      }
+
+      .hero-stats,
+      .real-gallery,
+      .review-grid,
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-card.wide {
+        grid-column: auto;
+      }
+
+      section {
+        padding: 64px 0;
+      }
+
+      .product-media {
+        min-height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Navigasi utama">
+      <a class="brand" href="#beranda" aria-label="Madu Coffie Hendra Saputra">
+        <span class="brand-mark">HC</span>
+        <span>Madu Coffie</span>
+      </a>
+      <div class="nav-links">
+        <a href="#etalase">Etalase</a>
+        <a href="#keunggulan">Keunggulan</a>
+        <a href="#review">Review</a>
+        <a href="#alamat">Alamat</a>
+        <a href="#order">Cara Order</a>
+      </div>
+      <a class="btn btn-primary" href="https://wa.me/6281362530141?text=Halo%20Hendra%20Saputra%2C%20saya%20mau%20order%20produk%20Madu%20Coffie." target="_blank" rel="noopener">Order WA</a>
+    </nav>
+  </header>
+
+  <main id="beranda">
+    <section class="hero" aria-label="Madu Coffie Hendra Saputra">
+      <div class="hero-inner">
+        <p class="eyebrow">Punya Hendra Saputra</p>
+        <h1>Madu Coffie Hendra Saputra</h1>
+        <p class="hero-copy">Etalase kopi dan madu pilihan: coffee roasting, green bean, bubuk kopi, sampai madu murni. Cocok untuk penikmat kopi, reseller, kafe kecil, dan pesanan harian.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#etalase">Lihat Etalase</a>
+          <a class="btn btn-secondary" href="https://wa.me/6281362530141?text=Halo%20Hendra%20Saputra%2C%20saya%20tertarik%20dengan%20produk%20Madu%20Coffie.%20Boleh%20minta%20daftar%20harga%3F" target="_blank" rel="noopener">Minta Harga</a>
+        </div>
+        <div class="hero-stats" aria-label="Kategori produk">
+          <div class="stat"><strong>Roasting</strong><span>Kopi sangrai siap seduh</span></div>
+          <div class="stat"><strong>Green Bean</strong><span>Biji hijau untuk roaster</span></div>
+          <div class="stat"><strong>Bubuk</strong><span>Giling sesuai kebutuhan</span></div>
+          <div class="stat"><strong>Madu</strong><span>Manis alami pilihan</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="etalase">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Etalase Produk</h2>
+          <p>Etalase kini memakai foto real produk. Harga, ukuran, stok, dan varian masih bisa diperbarui kapan saja saat data final dikirim.</p>
+        </div>
+        <div class="category-strip" aria-label="Kategori etalase">
+          <span class="chip">Coffee Roasting</span>
+          <span class="chip">Green Bean</span>
+          <span class="chip">Bubuk Kopi</span>
+          <span class="chip">Madu</span>
+          <span class="chip">Paket Hampers</span>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-media" data-label="HS Honey" style="--photo:url('assets/produk-real/foto-02.jpeg')"></div>
+            <div class="product-body">
+              <h3>HS Honey Jerigen</h3>
+              <p>Madu raw & natural dalam kemasan jerigen, cocok untuk stok rumah, usaha minuman, reseller, dan kebutuhan grosir.</p>
+              <span class="price">Ready by request</span>
+              <a class="btn btn-primary" href="https://wa.me/6281362530141?text=Halo%20Hendra%2C%20saya%20mau%20tanya%20HS%20Honey%20Jerigen." target="_blank" rel="noopener">Pesan Produk</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media" data-label="Madu Botol" style="--photo:url('assets/produk-real/foto-04.jpeg')"></div>
+            <div class="product-body">
+              <h3>Madu Botol Siap Jual</h3>
+              <p>Kemasan botol praktis dengan warna madu yang jernih, cocok untuk pembelian eceran dan paket hadiah.</p>
+              <span class="price">Ukuran sesuai stok</span>
+              <a class="btn btn-primary" href="https://wa.me/6281362530141?text=Halo%20Hendra%2C%20saya%20mau%20tanya%20Madu%20Botol%20Siap%20Jual." target="_blank" rel="noopener">Pesan Produk</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media" data-label="Bubuk Kopi" style="--photo:url('assets/produk-real/foto-01.jpeg')"></div>
+            <div class="product-body">
+              <h3>HS Bubuk Kopi Arabica Gayo</h3>
+              <p>Bubuk kopi 100% Arabica Gayo dengan pilihan proses winey, natural, honey, full wash, dan semi wash.</p>
+              <span class="price">Netto 200 gr, 500 gr, 1000 gr</span>
+              <a class="btn btn-primary" href="https://wa.me/6281362530141?text=Halo%20Hendra%2C%20saya%20mau%20tanya%20HS%20Bubuk%20Kopi%20Arabica%20Gayo." target="_blank" rel="noopener">Pesan Produk</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media" data-label="Paket Produk" style="--photo:url('assets/produk-real/foto-13.jpeg')"></div>
+            <div class="product-body">
+              <h3>Paket Madu & Kopi</h3>
+              <p>Paket gabungan madu HS Honey dan HS Bubuk Kopi, cocok untuk oleh-oleh, reseller, dan promosi produk.</p>
+              <span class="price">Bisa custom paket</span>
+              <a class="btn btn-primary" href="https://wa.me/6281362530141?text=Halo%20Hendra%2C%20saya%20mau%20tanya%20Paket%20Madu%20dan%20Kopi." target="_blank" rel="noopener">Pesan Produk</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media" data-label="Stok Madu" style="--photo:url('assets/produk-real/foto-07.jpeg')"></div>
+            <div class="product-body">
+              <h3>Stok Madu Jerigen</h3>
+              <p>Stok madu dalam jumlah banyak untuk kebutuhan pembelian partai, event, atau penjualan kembali.</p>
+              <span class="price">Hubungi untuk jumlah stok</span>
+              <a class="btn btn-primary" href="https://wa.me/6281362530141?text=Halo%20Hendra%2C%20saya%20mau%20tanya%20stok%20madu%20jerigen." target="_blank" rel="noopener">Pesan Produk</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media" data-label="Kemasan Kecil" style="--photo:url('assets/produk-real/foto-06.jpeg')"></div>
+            <div class="product-body">
+              <h3>Madu Kemasan Kecil</h3>
+              <p>Pilihan botol dan jerigen kecil untuk pembeli yang ingin mencoba rasa atau menjual ulang dalam kemasan praktis.</p>
+              <span class="price">Pilihan ukuran fleksibel</span>
+              <a class="btn btn-primary" href="https://wa.me/6281362530141?text=Halo%20Hendra%2C%20saya%20mau%20tanya%20madu%20kemasan%20kecil." target="_blank" rel="noopener">Pesan Produk</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media" data-label="Kopi Seduh" style="--photo:url('assets/produk-real/foto-10.jpeg')"></div>
+            <div class="product-body">
+              <h3>Paket Seduh Kopi Madu</h3>
+              <p>Inspirasi penyajian kopi dengan madu, cocok untuk konten promosi dan rekomendasi minuman pelanggan.</p>
+              <span class="price">Tanya racikan & produk</span>
+              <a class="btn btn-primary" href="https://wa.me/6281362530141?text=Halo%20Hendra%2C%20saya%20mau%20tanya%20paket%20seduh%20kopi%20madu." target="_blank" rel="noopener">Pesan Produk</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media" data-label="Madu Timbang" style="--photo:url('assets/produk-real/foto-05.jpeg')"></div>
+            <div class="product-body">
+              <h3>Madu Curah Timbang</h3>
+              <p>Madu bisa ditakar sesuai kebutuhan, cocok untuk pembeli yang ingin ukuran tertentu atau kebutuhan usaha.</p>
+              <span class="price">Timbang sesuai pesanan</span>
+              <a class="btn btn-primary" href="https://wa.me/6281362530141?text=Halo%20Hendra%2C%20saya%20mau%20tanya%20madu%20curah%20timbang." target="_blank" rel="noopener">Pesan Produk</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-head" style="margin-top:64px">
+          <h2>Foto Real Produk</h2>
+          <p>Galeri ini menampilkan kemasan HS Honey, stok madu, botol, label, bubuk kopi, dan contoh penyajian kopi madu.</p>
+        </div>
+        <div class="real-gallery" aria-label="Galeri foto real produk Madu Coffie">
+          <div class="gallery-card wide"><img src="assets/produk-real/foto-13.jpeg" alt="Paket produk HS Honey dan HS Bubuk Kopi"></div>
+          <div class="gallery-card"><img src="assets/produk-real/foto-02.jpeg" alt="Jerigen HS Honey"></div>
+          <div class="gallery-card"><img src="assets/produk-real/foto-04.jpeg" alt="Botol madu HS Honey"></div>
+          <div class="gallery-card wide"><img src="assets/produk-real/foto-03.jpeg" alt="Stok jerigen madu HS Honey"></div>
+          <div class="gallery-card wide"><img src="assets/produk-real/foto-07.jpeg" alt="Deretan stok madu jerigen"></div>
+          <div class="gallery-card"><img src="assets/produk-real/foto-06.jpeg" alt="Kemasan madu botol dan jerigen"></div>
+          <div class="gallery-card"><img src="assets/produk-real/foto-01.jpeg" alt="Label HS Honey dan HS Bubuk Kopi"></div>
+          <div class="gallery-card wide"><img src="assets/produk-real/foto-10.jpeg" alt="Penyajian kopi dengan madu"></div>
+          <div class="gallery-card wide"><img src="assets/produk-real/foto-09.jpeg" alt="Kopi madu siap minum"></div>
+          <div class="gallery-card"><img src="assets/produk-real/foto-11.jpeg" alt="Dua jerigen madu"></div>
+          <div class="gallery-card"><img src="assets/produk-real/foto-12.jpeg" alt="Kemasan madu jerigen kecil"></div>
+          <div class="gallery-card wide"><img src="assets/produk-real/foto-08.jpeg" alt="Dua jerigen HS Honey"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-band" id="keunggulan">
+      <div class="wrap">
+        <div class="feature-grid">
+          <div class="feature-lead">
+            <h2>Dibuat untuk pembeli yang ingin langsung yakin.</h2>
+            <p>Tampilan etalase dibuat jelas, cepat dibaca, dan langsung mengarahkan calon pembeli ke WhatsApp.</p>
+          </div>
+          <div class="feature-card">
+            <strong>Produk Lengkap</strong>
+            <p>Satu tempat untuk roasting, green bean, bubuk kopi, madu, dan paket custom.</p>
+          </div>
+          <div class="feature-card">
+            <strong>Order Cepat</strong>
+            <p>Setiap produk punya tombol WhatsApp dengan pesan otomatis ke Hendra Saputra.</p>
+          </div>
+          <div class="feature-card">
+            <strong>Siap Update</strong>
+            <p>Nama produk, harga, ukuran, dan foto bisa ditambah saat katalog asli sudah tersedia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews" id="review">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Review Teman Kantor & Keluarga</h2>
+          <p>Beberapa kesan pembeli terdekat yang sudah mencoba madu dan kopi dari Hendra Saputra.</p>
+        </div>
+        <div class="review-grid">
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>Madu HS Honey rasanya enak dan tidak bikin serik. Saya paling suka dicampur air hangat pagi-pagi, badan terasa lebih segar sebelum berangkat kerja.</blockquote>
+            <div class="reviewer">
+              <div class="avatar">AR</div>
+              <div>
+                <strong>Arman</strong>
+                <span>Teman kantor</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>Kopinya wangi, bubuknya halus, dan cocok untuk seduhan harian di kantor. Kalau habis biasanya langsung pesan lagi karena gampang chat WA.</blockquote>
+            <div class="reviewer">
+              <div class="avatar">RS</div>
+              <div>
+                <strong>Rizki</strong>
+                <span>Teman kantor</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>Untuk keluarga, madu jerigen sangat praktis karena stoknya cukup lama. Anak-anak juga suka kalau dicampur teh hangat atau minuman lemon.</blockquote>
+            <div class="reviewer">
+              <div class="avatar">NF</div>
+              <div>
+                <strong>Nafisah</strong>
+                <span>Keluarga</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>Saya suka paket madu dan kopinya karena pas untuk oleh-oleh. Tampilannya rapi, produknya jelas, dan bisa tanya stok langsung ke Hendra.</blockquote>
+            <div class="reviewer">
+              <div class="avatar">YD</div>
+              <div>
+                <strong>Yudi</strong>
+                <span>Keluarga</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>Madu botolnya mudah dibawa dan cocok untuk konsumsi harian. Rasanya natural, tidak terlalu tajam, dan warnanya cantik.</blockquote>
+            <div class="reviewer">
+              <div class="avatar">ML</div>
+              <div>
+                <strong>Mila</strong>
+                <span>Teman kantor</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>Kalau ada acara keluarga, madu ini enak dijadikan campuran minuman. Kopinya juga cocok untuk yang suka aroma Arabica Gayo.</blockquote>
+            <div class="reviewer">
+              <div class="avatar">FA</div>
+              <div>
+                <strong>Fauzan</strong>
+                <span>Keluarga</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="location" id="alamat">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Alamat & Lokasi</h2>
+          <p>Calon pembeli bisa melihat titik lokasi Madu Coffie Hendra Saputra langsung dari peta dan membuka arah di Google Maps.</p>
+        </div>
+        <div class="location-grid">
+          <div class="address-card">
+            <h3>Krueng Mane, Aceh Utara</h3>
+            <p>Lokasi usaha Madu Coffie Hendra Saputra berada di area Krueng Mane, Kabupaten Aceh Utara, Aceh.</p>
+            <div class="address-line">
+              <span>Alamat</span>
+              Krueng Mane, Aceh Utara, Aceh
+              <span>Koordinat peta</span>
+              5.245914, 96.917189
+            </div>
+            <a class="btn btn-primary" href="https://www.google.com/maps?q=5.245914,96.917189" target="_blank" rel="noopener">Buka Arah Google Maps</a>
+            <a class="btn btn-secondary" href="https://wa.me/6281362530141?text=Halo%20Hendra%20Saputra%2C%20saya%20mau%20tanya%20lokasi%20Madu%20Coffie%20di%20Krueng%20Mane%20Aceh%20Utara." target="_blank" rel="noopener" style="margin-top:10px;width:100%">Tanya Lokasi via WA</a>
+          </div>
+          <div class="map-frame">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d809.571929581409!2d96.91761579383416!3d5.245691798661569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sid!4v1783049944003!5m2!1sen!2sid" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Peta lokasi Madu Coffie Hendra Saputra di Krueng Mane Aceh Utara"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="order" id="order">
+      <div class="wrap">
+        <div class="order-box">
+          <div>
+            <div class="section-head" style="display:block;margin-bottom:24px">
+              <h2>Cara Order</h2>
+              <p>Pembeli tinggal pilih produk, klik tombol WhatsApp, lalu lanjutkan percakapan untuk stok, harga, dan pengiriman.</p>
+            </div>
+            <div class="steps">
+              <div class="step">
+                <b>1</b>
+                <div><h3>Pilih Produk</h3><p>Lihat etalase kopi roasting, green bean, bubuk kopi, atau madu.</p></div>
+              </div>
+              <div class="step">
+                <b>2</b>
+                <div><h3>Klik WhatsApp</h3><p>Pesan otomatis masuk ke nomor Hendra Saputra.</p></div>
+              </div>
+              <div class="step">
+                <b>3</b>
+                <div><h3>Konfirmasi Pesanan</h3><p>Tentukan ukuran, jumlah, harga, alamat, dan metode pengiriman.</p></div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="contact-panel" aria-label="Kontak WhatsApp">
+            <h2>Mau order atau minta daftar harga?</h2>
+            <p>Hubungi langsung Hendra Saputra. Website ini sudah siap dipakai untuk menarik calon pembeli dari chat, status, bio media sosial, atau promosi harian.</p>
+            <a class="btn btn-primary" href="https://wa.me/6281362530141?text=Halo%20Hendra%20Saputra%2C%20saya%20mau%20order%20produk%20Madu%20Coffie.%20Mohon%20info%20stok%20dan%20harga." target="_blank" rel="noopener">Chat WhatsApp Sekarang</a>
+            <span class="phone">+62 813-6253-0141</span>
+            <div class="catalog-note">Kirimkan foto produk, nama varian, ukuran, harga, dan stok. Etalase ini bisa dibuat lebih lengkap dengan kategori dan tampilan produk asli.</div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <strong>Madu Coffie Hendra Saputra</strong>
+      <span>Roasting coffee, green bean, bubuk kopi, dan madu.</span>
+    </div>
+  </footer>
+</body>
+</html>

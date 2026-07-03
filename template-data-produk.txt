@@ -1,0 +1,23 @@
+Template data produk untuk update etalase Madu Coffie Hendra Saputra
+
+Kirim data seperti ini untuk setiap produk:
+
+1. Nama produk:
+2. Kategori: Coffee Roasting / Green Bean / Bubuk Kopi / Madu / Paket
+3. Ukuran atau berat:
+4. Harga:
+5. Stok:
+6. Deskripsi singkat:
+7. Foto produk:
+8. Catatan khusus: contoh tingkat roasting, asal kopi, tingkat giling, jenis madu, atau minimal order
+
+Contoh:
+
+Nama produk: Kopi Arabika Roasting Medium
+Kategori: Coffee Roasting
+Ukuran atau berat: 250 gram
+Harga: Rp65.000
+Stok: Ready
+Deskripsi singkat: Aroma manis, body sedang, cocok untuk V60 dan tubruk.
+Foto produk: kirim foto produk
+Catatan khusus: Bisa request whole bean atau bubuk.
